@@ -1,0 +1,7 @@
+# Para que Git maneje los finales de línea automáticamente, pero usando LF.
+* text=auto
+
+# Para archivos de texto específicos, como scripts de shell o archivos de configuración, puedes especificar:
+*.sh text eol=lf
+*.bat text eol=crlf
+*.md text eol=lf
