@@ -4,6 +4,7 @@ import { Login } from './pages/Login';  // Importamos la página de Login
 import Aprender from './pages/Aprender'; // Importamos la página Aprender
 import Sidebar from './components/Sidebar'; // Importamos el Sidebar
 import Tienda from './pages/Tienda';
+import Matematicas from './pages/Matematicas';
 
 function App() {
   return (
@@ -20,6 +21,16 @@ function App() {
             {/* Contenido principal de Aprender */}
             <div className="flex-1 p-8 lg:pl-[256px]"> {/* Agregar padding izquierdo en pantallas grandes */}
               <Aprender />
+            </div>
+          </div>
+        } />
+        <Route path="/matematicas" element={
+          <div className="flex min-h-screen">
+            {/* Sidebar solo se muestra en Aprender */}
+            <Sidebar />
+            {/* Contenido principal de Aprender */}
+            <div className="flex-1 p-8 lg:pl-[256px]"> {/* Agregar padding izquierdo en pantallas grandes */}
+              <Matematicas />
             </div>
           </div>
         } />
