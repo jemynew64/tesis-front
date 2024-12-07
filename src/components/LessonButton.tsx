@@ -8,6 +8,7 @@ interface LessonButtonProps {
   isCompleted: boolean;
   totalCount: number;
   index: number;
+  onClick: () => void; // Agregamos la propiedad onClick aquí
 }
 
 const LessonButton = ({ id, title, isLocked, isCompleted, totalCount, index }: LessonButtonProps) => {
@@ -17,7 +18,7 @@ const LessonButton = ({ id, title, isLocked, isCompleted, totalCount, index }: L
   const rightPosition = (index / totalCount) * 100;
 
   return (
-    <Link to={`/lesson/${id}`} className="relative mb-4 flex items-center justify-center">
+    <Link to={`/leccion/${id}`} className="relative mb-4 flex items-center justify-center">
       <div
         className="flex flex-col items-center justify-center relative"
         style={{

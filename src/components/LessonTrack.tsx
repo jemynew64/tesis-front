@@ -1,16 +1,19 @@
 import React from 'react';
 import LessonButton from './LessonButton';
 
-interface LessonTrackProps {
-  lessons: Array<{
-    id: number;
-    title: string;
-    isLocked: boolean;
-    isCompleted: boolean;
-  }>;
+interface Lesson {
+  id: number;
+  title: string;
+  isLocked: boolean;
+  isCompleted: boolean;
 }
 
-const LessonTrack: React.FC<LessonTrackProps> = ({ lessons }) => {
+interface LessonTrackProps {
+  lessons: Lesson[];
+  onLessonClick: (lessonId: number) => void; // Agregamos la propiedad onLessonClick aquí
+}
+
+const LessonTrack: React.FC<LessonTrackProps> = ({ lessons, onLessonClick }) => {
   return (
     <div className="flex justify-center items-start w-full py-16 relative">
       {/* Línea de camino visual */}
@@ -46,6 +49,7 @@ const LessonTrack: React.FC<LessonTrackProps> = ({ lessons }) => {
                 isCompleted={lesson.isCompleted}
                 totalCount={lessons.length}
                 index={index}
+                onClick={() => onLessonClick(lesson.id)} // Usamos onLessonClick aquí
               />
             </div>
           );

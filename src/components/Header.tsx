@@ -8,7 +8,7 @@ interface HeaderProps {
 const Header = ({ title }: HeaderProps) => {
   return (
     <div className="sticky top-0 bg-white p-4 flex items-center justify-between border-b">
-      <Link to="/courses">
+      <Link to="/aprender">
         <button className="p-2 rounded-full hover:bg-gray-200">
           <FaArrowLeft  className="h-5 w-5" />
         </button>

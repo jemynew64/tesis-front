@@ -18,7 +18,7 @@ const Tienda = () => {
             alt="Icono Tienda" 
             className="mx-auto w-32 h-32 mb-4" // Tamaño del icono (ajústalo a tu gusto)
           />
-          <h1 className="text-2xl font-semibold mb-6">Tienda</h1>
+          <h1 className="text-2xl font-semibold mb-6">Canje de puntos</h1>
         </div>
 
         {/* Oferta de "Recargar vidas" */}
